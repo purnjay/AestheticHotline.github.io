@@ -3,7 +3,7 @@
         <title>Aesthetic Hotline</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name=”description” content=”We are broken people fixing broken people.”>
+        <meta name=”description” content="We are broken people fixing broken people.">
 <style>
 @-webkit-keyframes spin {
   0% { -webkit-transform: rotate(0deg); }
@@ -75,11 +75,23 @@
 		  	margin : 0 auto;
         }
         
-        #top-nav a:hover{
+		#topnav-hover-btn{
+		  /*border : 2px solid white;*/
+		  -webkit-transition-duration: 0.4s; /* Safari */
+          transition-duration: 0.4s;
+		}
+		
+		#topnav-hover-btn:hover{
+		  background-color: white;
+		  color: #000000;
+		  /*border : 2px solid black;*/
+		}
+		
+        #top-nav-a a:hover{
             color : #f7f7f7;
         }
 		
-		#top-nav a.active{
+		#top-nav-a a.active{
 			color : #f4f8ff;
 		}
 		/*
@@ -235,10 +247,11 @@
 
             <div id="top-nav">
 			   <!-- <img src="./images/top-nav-icon.jpg" class="home-img"> -->
-                <a href="#top-nav" class="active">Home</a>
-                <a href="#middle">Info</a>
-                <a href="#middle-2">Family</a>
-                <a href="#middle-3">Links </a>
+                <a href="#top-nav" class="active" id="top-nav-a">Home</a>
+                <a href="#middle" id="top-nav-a">Info</a>
+                <a href="#middle-2" id="top-nav-a">Family</a>
+                <a href="https://discord.gg/pnmQR22"  id="topnav-hover-btn">Join Us</a>
+				
             </div>
 
             <div id="top">
@@ -271,7 +284,7 @@
 	   var timeOut;
 	   
 	   function load(){
-		   timeOut = setTimeout(showPage, 3000);
+		   timeOut = setTimeout(showPage, 2000);
 	   }
 	   
 	   function showPage(){
